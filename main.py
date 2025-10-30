@@ -8,9 +8,13 @@ edades = {
     "sterben": 22
 }
 
-nombre_ingresado = input("Ingresa un nombre: ").lower()
+continuar = "s"
+while continuar == "s":
+    nombre_ingresado = input("Ingresa un nombre: ").lower()
 
-if nombre_ingresado in edades:
-    print(f"{nombre_ingresado} tiene {edades[nombre_ingresado]} años.")
-else:
-    print("La persona no fue encontrada.")
+    if nombre_ingresado in edades:
+        print(f"{nombre_ingresado} tiene {edades[nombre_ingresado]} años.")
+    else:
+        print("La persona no fue encontrada.")
+    
+    continuar = input("Continuar buscando edades (S/N)").lower()
